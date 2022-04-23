@@ -1,0 +1,50 @@
+  599  tr -d '\n' < ~/.ssh/id_ed25519.pub | pbcopy
+  600  cat ~/.ssh/id_ed25519.pub | clip
+  601  xclip -sel clip < ~/.ssh/id_ed25519.pub
+  602  sudo apt install xclip
+  603  xclip -sel clip < ~/.ssh/id_ed25519.pub
+  604  git clone git@gitlab.com:bootcamp2022-mirzo/backend.git
+  605  cd
+  606  ls
+  607  kkk
+  608  k
+  609  ls
+  610  cd /backend
+  611  cd backend/
+  612  ls
+  613  find *.txt
+  614  find /*.txt
+  615  find 
+  616  find help
+  617  man find
+  618  find -path
+  619  find
+  620  find -L /var/
+  621  find -L /home/
+  622  find -L /home/find
+  623  findup
+  624  ls
+  625  cksum
+  626  cksum *md
+  627  cp README.md README1.md
+  628  ls
+  629  cat README1.md 
+  630  cksum *.md
+  631  cksum *.md > output.txt
+  632  cat output.txt 
+  633  touch bash.sh
+  634  vi bash.sh
+  635  cat bash.sh 
+  636  bash bash.sh
+  637  cksum *.md | cut -d " " -f1
+  638  touch removeDup.sh
+  639  vi removeDup.sh
+  640  cat removeDup.sh 
+  641  bash removeDup.sh 
+  642  ls
+  643  vi removeDup.sh 
+  644  bash removeDup.sh 
+  645  ls
+  646  code removeDup.sh 
+  647  command$: history 50 > currenttimestamp.txt
+  648  history 50 > currenttimestamp.txt
