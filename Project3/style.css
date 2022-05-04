@@ -1,0 +1,62 @@
+* {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 10% 0;
+    background: -webkit-linear-gradient(to top, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #1e1d18, #4ea1ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#tic-tac-toe {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#reset {
+    margin-top: 20px;
+}
+
+.ttt-item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 70px;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav img {
+    display: block;
+    width: 50px;
+    text-align: right;
+}
+.out {
+    background: black;
+    color: white;
+}
+
+@media screen and (max-width: 437px) {
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
