@@ -53,8 +53,11 @@ func MySquareRoot(number int, precision uint) float64 {
 		// 	result += increment;
 		// }
 		for {
-			result += increment
-			if result*result > float64(number) {
+
+			if result*result <= float64(number) {
+				result += increment
+
+			} else {
 				break
 			}
 
