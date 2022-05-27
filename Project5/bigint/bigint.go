@@ -2,7 +2,8 @@ package bigint
 
 import (
 	"errors"
-	"strconv"
+	"fmt"
+	"math/big"
 	"strings"
 )
 
@@ -41,14 +42,15 @@ func (z *BigInt) Set(num string) error {
 }
 
 func Add(a, b BigInt) BigInt {
-	// val := a.value + b.value
-	a1, err := strconv.Atoi(a.value)
-	b1, err := strconv.Atoi(b.value)
-	if err != nil {
-		panic(err)
+	i := new(big.Int)
+	i, ok := i.SetString(a.value, 10)
+	j := new(big.Int)
+	j, ok1 := j.SetString(b.value, 10)
+	if !ok && !ok1 {
+		fmt.Println("SetString: error")
 	}
-	val := a1 + b1
-	str := strconv.Itoa(val)
-	return BigInt{value: str}
-	// return BigInt{
+	i.Add(i, j)
+	bigstr := i.String()
+
+	return BigInt{bigstr}
 }
