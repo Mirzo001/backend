@@ -7,15 +7,20 @@ import (
 
 func main() {
 
-	a, err := bigint.NewInt("11231231231231231231231231233")
+	a, err := bigint.NewInt("123456789101112131415")
 	if err != nil {
 		panic(err)
 	}
-	b, err := bigint.NewInt("1")
+	b, err := bigint.NewInt("123456789101112131414")
 	if err != nil {
 		panic(err)
 	}
 
 	c := bigint.Add(a, b)
-	fmt.Println(c)
+	_ = c
+	d := bigint.Sub(a, b)
+	_ = d
+	e := bigint.Multiply(a, b)
+
+	fmt.Println(e)
 }
