@@ -11,6 +11,10 @@ type BigInt struct {
 	value string
 }
 
+func (z *BigInt) Value() string {
+	return z.value
+}
+
 var BadInput = errors.New("Bad Input")
 
 func validate(num *string) error {
