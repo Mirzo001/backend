@@ -65,3 +65,41 @@ func TestAddTD(t *testing.T) {
 		})
 	}
 }
+
+func TestSubTD(t *testing.T) {
+	tests := []struct {
+		lable string
+		a, b  string
+		want  string
+		err   error
+	}{
+		{"Test 2", "123", "100", "23", nil},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.lable, func(t *testing.T) {
+			var err error
+			var a, b bigint.BigInt
+
+			a, err = bigint.NewInt(tt.a)
+
+			b, err = bigint.NewInt(tt.b)
+
+			testCaseTextOut := fmt.Sprintf("Add(%s,%s)", a.Value(), b.Value())
+
+			if err != nil {
+				if tt.err == nil {
+					t.Errorf("Test: %s | Result: %s | Expected: %s", testCaseTextOut, err.Error(), "nil")
+				} else if err.Error() != tt.err.Error() {
+					t.Errorf("Test: %s | Result: %s | Expected: %s", testCaseTextOut, err.Error(), tt.err.Error())
+				}
+			} else {
+				ans := bigint.Sub(a, b)
+				if ans.Value() != tt.want {
+					t.Errorf("Test: %s | Result: %s | Expected: %s", testCaseTextOut, ans.Value(), tt.want)
+				}
+			}
+
+		})
+	}
+}
